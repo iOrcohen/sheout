@@ -1,0 +1,38 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sheoutbe-dev-142910-authRole",
+      "UnauthRoleArn": "arn:aws:iam::949815275750:role/amplify-sheoutbe-dev-142910-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::949815275750:role/amplify-sheoutbe-dev-142910-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-sheoutbe-dev-142910-deployment",
+      "UnauthRoleName": "amplify-sheoutbe-dev-142910-unauthRole",
+      "StackName": "amplify-sheoutbe-dev-142910",
+      "StackId": "arn:aws:cloudformation:us-east-2:949815275750:stack/amplify-sheoutbe-dev-142910/4f6a4370-9b82-11eb-8654-02b5a70b77dc",
+      "AmplifyAppId": "d1kdyi23wuxwhi"
+    },
+    "categories": {
+      "auth": {
+        "sheoutbe56d09966": {},
+        "userPoolGroups": {}
+      },
+      "function": {
+        "createOrder": {
+          "deploymentBucketName": "amplify-sheoutbe-dev-142910-deployment",
+          "s3Key": "amplify-builds/createOrder-7474767373615a517a73-build.zip"
+        },
+        "orderConfirmation": {
+          "deploymentBucketName": "amplify-sheoutbe-dev-142910-deployment",
+          "s3Key": "amplify-builds/orderConfirmation-4a3444304e397a764553-build.zip"
+        }
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "sheoutBE4Blst-dev",
+          "Id": "3ec459fccc9646d38da93fae8df7cf03",
+          "Region": "us-east-1"
+        }
+      }
+    }
+  }
+}

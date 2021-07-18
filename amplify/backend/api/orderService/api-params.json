@@ -1,0 +1,75 @@
+{
+    "paths": [
+        {
+            "name": "/item",
+            "lambdaFunction": "createOrder",
+            "privacy": {
+                "userPoolGroups": {
+                    "orcohenplayground": [
+                        "/POST",
+                        "/GET",
+                        "/PUT",
+                        "/PATCH",
+                        "/DELETE"
+                    ]
+                }
+            },
+            "policyResourceName": "/item"
+        },
+        {
+            "name": "/saveProductToOrder",
+            "lambdaFunction": "createOrder",
+            "privacy": {
+                "userPoolGroups": {
+                    "orcohenplayground": [
+                        "/POST",
+                        "/GET",
+                        "/PUT",
+                        "/PATCH",
+                        "/DELETE"
+                    ]
+                }
+            },
+            "policyResourceName": "/saveProductToOrder"
+        }
+    ],
+    "resourceName": "orderService",
+    "apiName": "orderService",
+    "functionArns": [
+        {
+            "lambdaFunction": "createOrder"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-sheoutbe-dev-142910-authRole",
+        "unAuthRoleName": "amplify-sheoutbe-dev-142910-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "createOrder",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "auth",
+            "resourceName": "sheoutbe56d09966",
+            "attributes": [
+                "UserPoolId"
+            ]
+        },
+        {
+            "category": "auth",
+            "resourceName": "userPoolGroups",
+            "attributes": [
+                "orcohenplaygroundGroupRole"
+            ]
+        }
+    ],
+    "uuid": "45e23750",
+    "authResourceName": "sheoutbe56d09966"
+}

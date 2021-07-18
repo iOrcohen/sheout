@@ -1,0 +1,63 @@
+type Product
+  @model
+  @auth(
+    rules: [
+      { allow: groups, groups: ["orcohenplayground"] }
+      { allow: private, provider: iam }
+    ]
+  ) {
+  id: ID!
+  name: String!
+  pictureUrl: String
+  price: Float
+  orders: [OrderProduct]
+    @connection(keyName: "orderProductByProductID", fields: ["id"])
+}
+
+type OrderProduct
+  @model
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "owner", identityClaim: "sub" }
+      { allow: private, provider: iam }
+    ]
+  )
+  @key(name: "orderProductByOrderID", fields: ["orderId"])
+  @key(name: "orderProductByProductID", fields: ["productId"]) {
+  id: ID!
+  productId: ID!
+  orderId: ID!
+  product: Product! @connection(fields: ["productId"])
+  order: Order! @connection(fields: ["orderId"])
+  quantity: Int!
+  owner: String!
+}
+
+type Order
+  @model
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "owner", identityClaim: "sub" }
+      { allow: private, provider: iam }
+    ]
+  ) {
+  id: ID!
+  products: [OrderProduct]
+    @connection(keyName: "orderProductByOrderID", fields: ["id"])
+  userEmail: String!
+  owner: String!
+}
+
+type OrderInfo
+  @model
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "owner", identityClaim: "sub" }
+      { allow: private, provider: iam }
+    ]
+  ) {
+  id: ID!
+  orderId: ID!
+  owner: String!
+  order: Order @connection(fields: ["orderId"])
+}

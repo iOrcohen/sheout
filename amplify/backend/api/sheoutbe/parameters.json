@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "sheoutbe",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authsheoutbe56d09966",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

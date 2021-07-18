@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "api": {
+      "sheoutbe": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "analytics": {
+      "sheoutBE4Blst": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

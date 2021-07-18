@@ -1,0 +1,12 @@
+{
+  "httpMethod": "POST",
+  // "path": "/saveProductToOrder",
+  // "body": "{\"orderId\":\"2ba9084b-87e6-4eb9-a34a-aee53c467ded\",\"product\":{\"id\":\"9ba4c09e-144c-4c89-99c9-a94d46ae26a7\",\"name\":\"Garbaim Im Knafaim\",\"pictureUrl\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf89bWF3uK-dt4nnWU2jBA01ithN8xK-7g_g&usqp=CAU\",\"price\":120,\"orders\":{\"items\":[{\"id\":\"1ab61b9e-1a38-47e3-8c67-ad0355caecc7\",\"productId\":\"9ba4c09e-144c-4c89-99c9-a94d46ae26a7\",\"orderId\":\"238aa5d4-74a3-4157-bb76-07233216a191\",\"quantity\":1,\"createdAt\":\"2021-04-18T07:37:13.787Z\",\"updatedAt\":\"2021-04-18T07:37:13.787Z\"}],\"nextToken\":null},\"createdAt\":\"2021-04-12T13:24:06.488Z\",\"updatedAt\":\"2021-04-12T13:24:06.488Z\"},\"quantity\":1}",
+  "path": "/item",
+  "body": "{\"userEmail\":\"or@pp.co.il\"}",
+  "isBase64Encoded": false,
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "content-type": "application/json; charset=UTF-8"
+  }
+}

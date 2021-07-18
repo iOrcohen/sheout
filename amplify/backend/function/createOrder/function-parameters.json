@@ -1,0 +1,13 @@
+{
+  "lambdaLayers": [],
+  "permissions": {
+    "api": {
+      "sheoutbe": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  }
+}
